@@ -117,8 +117,6 @@ for chunk in client.stream("Tell me a short joke"):
 
 `chat()` returns the full text plus a `conversation_id`; pass that id back to keep the thread going, or omit it to start fresh. `stream()` yields the reply piece by piece.
 
-👉 More: [examples/01_direct_chat.py](examples/01_direct_chat.py), [02_direct_conversation.py](examples/02_direct_conversation.py), [03_direct_stream.py](examples/03_direct_stream.py)
-
 ---
 
 ## Usage 2: As an OpenAI-compatible server
@@ -161,8 +159,6 @@ curl http://localhost:8000/v1/chat/completions \
 | `GET`  | `/healthz` | Health check (rate-limit exempt) |
 
 > Change the address with env vars: `HOST=0.0.0.0 PORT=8080 python app.py`, or run `uvicorn server.api:app --host 0.0.0.0 --port 8080`.
-
-👉 More: [examples/04_server_http.py](examples/04_server_http.py), [examples/05_server_stream.py](examples/05_server_stream.py), [examples/06_server_openai_sdk.py](examples/06_server_openai_sdk.py)
 
 ---
 
@@ -259,7 +255,6 @@ yourself.
 | --- | --- |
 | [deepseek/](deepseek/) | The core library: `DeepSeekClient`, auth/browser sign-in ([auth.py](deepseek/auth.py)), the HTTP driver ([client.py](deepseek/client.py)), and the PoW solver ([pow.py](deepseek/pow.py)) |
 | [server/](server/) | The FastAPI OpenAI-compatible server |
-| [examples/](examples/) | Runnable examples for every feature ([examples/README.md](examples/README.md)) |
 | [app.py](app.py) | Starts the server |
 
 ---
